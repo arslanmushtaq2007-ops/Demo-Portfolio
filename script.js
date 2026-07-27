@@ -86,7 +86,7 @@
     }
 
     /* ============================
-       3. PARTICLE SYSTEM
+       3. PARTICLE SYSTEM (Optimized for performance)
     ============================ */
     const canvas = document.getElementById('particlesCanvas');
     if (canvas) {
@@ -144,8 +144,8 @@
 
         function initParticles() {
             particles = [];
-            // Particle count based on screen size (performance)
-            const count = Math.min(Math.floor(window.innerWidth / 15), 80);
+            // Cap particle count at 25 to fix lag and drastically improve performance
+            const count = Math.min(Math.floor(window.innerWidth / 15), 25);
             for (let i = 0; i < count; i++) {
                 particles.push(new Particle());
             }
