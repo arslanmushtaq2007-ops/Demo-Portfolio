@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Arslan — AI Full Stack Engineer</title>
 
-    <!-- Professional Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Devicon (For Programming Language Logos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -37,6 +40,7 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -73,7 +77,6 @@
                     <div class="profile-orb">
                         <div class="profile-ring"></div>
                         <div class="profile-image">
-                            <!-- PROFILE PICTURE: Place 'profile.jpg' in the same folder -->
                             <img src="profile.jpg" alt="Muhammad Arslan" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="profile-placeholder" style="display: none;">
                                 <i class="fa-solid fa-user"></i>
@@ -133,35 +136,59 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>Python</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 95%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>JavaScript</span><span class="skill-percent">92%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 92%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>TypeScript</span><span class="skill-percent">88%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 88%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>Java</span><span class="skill-percent">85%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-java-plain colored"></i> Java</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 85%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>React</span><span class="skill-percent">90%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-react-original colored"></i> React</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>Node.js</span><span class="skill-percent">88%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 88%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>TensorFlow</span><span class="skill-percent">80%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-tensorflow-original colored"></i> TensorFlow</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 80%"></div></div>
                     </div>
                     <div class="skill-card" data-reveal>
-                        <div class="skill-info"><span>REST APIs</span><span class="skill-percent">90%</span></div>
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
                     </div>
                 </div>
@@ -232,50 +259,164 @@
                 <div class="projects-grid">
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-comments"></i></div>
-                            <h3>AI Chatbot Platform</h3>
-                            <p>An intelligent conversational AI platform with NLP capabilities.</p>
-                            <div class="project-tech"><span>Python</span><span>React</span><span>FastAPI</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/ai-chatbot/400/250" alt="AI Chatbot" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>AI Chatbot Platform</h3>
+                                <p>An intelligent conversational AI platform with NLP capabilities.</p>
+                                <div class="project-tech"><span>Python</span><span>React</span><span>FastAPI</span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-cart-shopping"></i></div>
-                            <h3>E-Commerce Web App</h3>
-                            <p>A full-featured online store with AI-powered recommendations.</p>
-                            <div class="project-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/ecommerce-app/400/250" alt="E-Commerce" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>E-Commerce Web App</h3>
+                                <p>A full-featured online store with AI-powered recommendations.</p>
+                                <div class="project-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-chart-line"></i></div>
-                            <h3>ML Prediction Dashboard</h3>
-                            <p>Real-time analytics dashboard powered by ML models for forecasting.</p>
-                            <div class="project-tech"><span>Python</span><span>React</span><span>D3.js</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/ml-dashboard/400/250" alt="ML Dashboard" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>ML Prediction Dashboard</h3>
+                                <p>Real-time analytics dashboard powered by ML models for forecasting.</p>
+                                <div class="project-tech"><span>Python</span><span>React</span><span>D3.js</span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-gears"></i></div>
-                            <h3>Task Automation Suite</h3>
-                            <p>Scripts that streamline data processing and workflow management.</p>
-                            <div class="project-tech"><span>Python</span><span>Celery</span><span>Docker</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/automation/400/250" alt="Automation" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Task Automation Suite</h3>
+                                <p>Scripts that streamline data processing and workflow management.</p>
+                                <div class="project-tech"><span>Python</span><span>Celery</span><span>Docker</span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-wave-square"></i></div>
-                            <h3>Real-Time Analytics Tool</h3>
-                            <p>WebSocket-powered tool visualizing live user data with charts.</p>
-                            <div class="project-tech"><span>Node.js</span><span>Socket.io</span><span>Vue.js</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/analytics/400/250" alt="Analytics" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Real-Time Analytics Tool</h3>
+                                <p>WebSocket-powered tool visualizing live user data with charts.</p>
+                                <div class="project-tech"><span>Node.js</span><span>Socket.io</span><span>Vue.js</span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tilt-card" data-reveal>
                         <div class="project-card-inner">
-                            <div class="project-image"><i class="fa-solid fa-network-wired"></i></div>
-                            <h3>Neural Network Visualizer</h3>
-                            <p>Interactive tool visualizing neural network architectures in 3D.</p>
-                            <div class="project-tech"><span>TensorFlow.js</span><span>Three.js</span></div>
+                            <div class="project-image-wrapper">
+                                <img src="https://picsum.photos/seed/neural-net/400/250" alt="Neural Network" class="project-img">
+                                <div class="project-overlay">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Neural Network Visualizer</h3>
+                                <p>Interactive tool visualizing neural network architectures in 3D.</p>
+                                <div class="project-tech"><span>TensorFlow.js</span><span>Three.js</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" data-reveal>05 — Testimonials</span>
+                    <h2 class="section-title floating-title" data-reveal>Client Reviews</h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="tilt-card" data-reveal>
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>"Muhammad delivered an AI chatbot that transformed our customer support. His attention to detail and technical expertise are outstanding. Highly recommended!"</p>
+                            <div class="review-author">
+                                <img src="https://i.pravatar.cc/100?img=47" alt="Sarah Jenkins">
+                                <div>
+                                    <h4>Sarah Jenkins</h4>
+                                    <span>CEO, TechFlow Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tilt-card" data-reveal>
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>"Working with Arslan was a game-changer. He built our entire web platform from scratch with incredible speed and quality. A true professional."</p>
+                            <div class="review-author">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="David Chen">
+                                <div>
+                                    <h4>David Chen</h4>
+                                    <span>CTO, InnovateX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tilt-card" data-reveal>
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>"The ML prediction dashboard Arslan built saved us countless hours of manual analysis. His ability to understand business needs is remarkable."</p>
+                            <div class="review-author">
+                                <img src="https://i.pravatar.cc/100?img=32" alt="Emily White">
+                                <div>
+                                    <h4>Emily White</h4>
+                                    <span>Product Lead, DataSync</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tilt-card" data-reveal>
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>"Exceptional work on our automation scripts. Arslan reduced our processing time by 80%. His code is clean, documented, and maintainable."</p>
+                            <div class="review-author">
+                                <img src="https://i.pravatar.cc/100?img=15" alt="Michael Brown">
+                                <div>
+                                    <h4>Michael Brown</h4>
+                                    <span>Founder, AutoPro Solutions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,7 +427,7 @@
         <section class="section" id="contact">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-label" data-reveal>05 — Contact</span>
+                    <span class="section-label" data-reveal>06 — Contact</span>
                     <h2 class="section-title floating-title" data-reveal>Get In Touch</h2>
                 </div>
                 <div class="contact-grid">
@@ -299,8 +440,7 @@
                             <span>aslanmushtaq2007@gmail.com</span>
                         </a>
 
-                        <!-- WHATSAPP BUTTON: Replace '923001234567' with your real number -->
-                        <a href="https://wa.me/923062871199" target="_blank" class="contact-whatsapp-btn">
+                        <a href="https://wa.me/923001234567" target="_blank" class="contact-whatsapp-btn">
                             <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                         </a>
                     </div>
