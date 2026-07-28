@@ -1,5 +1,5 @@
 /* ============================================================
-   PREMIUM PORTFOLIO JAVASCRIPT — 120FPS OPTIMIZED
+   WHITE & SKY BLUE 3D PORTFOLIO JAVASCRIPT
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,13 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function renderCursor() {
-            // Smooth lerp for trailing effect
             glowX += (mouseX - glowX) * 0.1;
             glowY += (mouseY - glowY) * 0.1;
             dotX += (mouseX - dotX) * 0.5;
             dotY += (mouseY - dotY) * 0.5;
 
-            // Use translate3d for GPU acceleration (forces 120fps)
             cursorGlow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
             cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
 
@@ -44,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         renderCursor();
 
-        // Hover effect
-        document.querySelectorAll('a, button, input, textarea').forEach(el => {
+        document.querySelectorAll('a, button, input, textarea, .tilt-card').forEach(el => {
             el.addEventListener('mouseenter', () => cursorDot.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursorDot.classList.remove('hover'));
         });
@@ -83,10 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add a slight stagger for grouped elements
                 const siblings = entry.target.parentElement.querySelectorAll('[data-reveal]');
                 const index = Array.from(siblings).indexOf(entry.target);
-                const delay = Math.min(index * 80, 400); // Max 400ms delay
+                const delay = Math.min(index * 80, 400);
 
                 setTimeout(() => {
                     entry.target.classList.add('revealed');
@@ -130,12 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let typeSpeed = isDeleting ? 50 : 100;
 
             if (!isDeleting && charIndex === currentRole.length) {
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 500; // Pause before next word
+                typeSpeed = 500;
             }
 
             setTimeout(type, typeSpeed);
@@ -156,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const suffix = counter.getAttribute('data-suffix') || '';
             let current = 0;
             const duration = 2000;
-            const stepTime = 16; // ~60fps
+            const stepTime = 16;
             const increment = target / (duration / stepTime);
 
             const updateCounter = () => {
@@ -214,7 +210,32 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsObserver.observe(skillsSection);
     }
 
-    /* 8. ACTIVE NAV LINK ON SCROLL */
+    /* 8. 3D TILT EFFECT FOR CARDS */
+    const tiltCards = document.querySelectorAll('.tilt-card');
+
+    tiltCards.forEach(card => {
+        const inner = card.querySelector('.service-card-inner') || card.querySelector('.project-card-inner');
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg tilt
+            const rotateY = ((x - centerX) / centerX) * 10;
+            
+            inner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            inner.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+
+    /* 9. ACTIVE NAV LINK ON SCROLL */
     let scrollTicking = false;
     window.addEventListener('scroll', () => {
         if (!scrollTicking) {
@@ -239,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* 9. CONTACT FORM */
+    /* 10. CONTACT FORM */
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
@@ -263,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 10. BACK TO TOP */
+    /* 11. BACK TO TOP */
     const backToTop = document.getElementById('backToTop');
 
     window.addEventListener('scroll', () => {
@@ -275,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* 11. CURRENT YEAR */
+    /* 12. CURRENT YEAR */
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
