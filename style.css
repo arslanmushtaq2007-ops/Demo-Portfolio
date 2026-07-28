@@ -1,20 +1,20 @@
 /* ============================================================
-   WHITE & SKY BLUE 3D PORTFOLIO — 120FPS OPTIMIZED
+   WHITE & SKY BLUE 3D PORTFOLIO — DARK BLUE TEXT
    ============================================================ */
 
 /* 1. VARIABLES & ROOT */
 :root {
-    --bg-primary: #ffffff;      /* Clean White */
-    --bg-secondary: #f8fafc;    /* Very light blue/gray */
+    --bg-primary: #ffffff;      
+    --bg-secondary: #f8fafc;    
     --bg-card: #ffffff;
-    --border: #e2e8f0;          /* Light border */
+    --border: #e2e8f0;          
     
-    --text-primary: #0f172a;    /* Deep Slate */
-    --text-secondary: #475569;  /* Muted Slate */
-    --text-muted: #94a3b8;
+    --text-primary: #172554;    /* Deep Dark Blue */
+    --text-secondary: #1e40af;  /* Muted Dark Blue */
+    --text-muted: #64748b;      /* Slate Gray for subtle text */
     
-    --accent-blue: #0ea5e9;     /* Sky Blue 500 */
-    --accent-sky: #38bdf8;      /* Sky Blue 400 */
+    --accent-blue: #0ea5e9;     /* Sky Blue */
+    --accent-sky: #38bdf8;      /* Light Sky Blue */
     --gradient: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
     
     --shadow-soft: 0 10px 30px -10px rgba(14, 165, 233, 0.15);
@@ -53,7 +53,6 @@ input, textarea { font-family: inherit; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .section { padding: 8rem 0; position: relative; }
 
-/* GPU-Accelerated Floating Background Elements */
 .bg-elements {
     position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
 }
@@ -77,7 +76,7 @@ input, textarea { font-family: inherit; }
     animation: spin 0.8s linear infinite;
 }
 
-/* 5. CUSTOM CURSOR (Dark for White BG) */
+/* 5. CUSTOM CURSOR */
 .cursor-glow, .cursor-dot {
     position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
     border-radius: 50%; transform: translate(-50%, -50%); will-change: transform;
@@ -140,7 +139,6 @@ input, textarea { font-family: inherit; }
 .hero-description { font-size: 1rem; color: var(--text-secondary); max-width: 500px; margin-bottom: 2rem; line-height: 1.7; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* Hero Profile Picture */
 .hero-visual { display: flex; justify-content: center; align-items: center; perspective: 1000px; }
 .profile-orb {
     position: relative; width: 380px; height: 380px; display: flex; justify-content: center; align-items: center;
@@ -163,7 +161,7 @@ input, textarea { font-family: inherit; }
 .profile-img { width: 100%; height: 100%; object-fit: cover; }
 .profile-placeholder { color: var(--text-muted); font-size: 4rem; }
 
-/* 9. SECTION HEADERS (Floating 3D Effect) */
+/* 9. SECTION HEADERS */
 .section-header { text-align: center; margin-bottom: 4rem; perspective: 1000px; }
 .section-label { display: block; font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; color: var(--accent-blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
 .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--text-primary); }
@@ -190,26 +188,28 @@ input, textarea { font-family: inherit; }
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
 .skill-card { padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); box-shadow: var(--shadow-soft); }
 .skill-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
-.skill-info { display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-family: var(--font-display); font-weight: 500; color: var(--text-primary); }
-.skill-percent { color: var(--accent-blue); font-size: 0.9rem; }
-.skill-bar { height: 4px; background: var(--bg-secondary); border-radius: 10px; overflow: hidden; }
+.skill-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-family: var(--font-display); font-weight: 500; color: var(--text-primary); }
+.skill-name { display: flex; align-items: center; gap: 0.6rem; font-size: 1.1rem; }
+.skill-name i { font-size: 1.8rem; }
+.skill-percent { color: var(--accent-blue); font-size: 1rem; font-weight: 600; }
+.skill-bar { height: 6px; background: var(--bg-secondary); border-radius: 10px; overflow: hidden; }
 .skill-bar-fill {
     height: 100%; width: 0; background: var(--gradient); border-radius: 10px;
     transition: width 1.5s var(--ease);
 }
 
-/* 12. 3D TILT CARDS (Services & Projects) */
-.services-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+/* 12. 3D TILT CARDS */
+.services-grid, .projects-grid, .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
 .tilt-card {
     background: transparent;
     perspective: 1000px;
 }
-.service-card-inner, .project-card-inner {
+.service-card-inner, .project-card-inner, .review-card-inner {
     padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
     transition: transform 0.2s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
     transform-style: preserve-3d; box-shadow: var(--shadow-soft); height: 100%;
 }
-.tilt-card:hover .service-card-inner, .tilt-card:hover .project-card-inner {
+.tilt-card:hover .service-card-inner, .tilt-card:hover .project-card-inner, .tilt-card:hover .review-card-inner {
     box-shadow: var(--shadow-hover);
     border-color: rgba(14, 165, 233, 0.3);
 }
@@ -218,11 +218,27 @@ input, textarea { font-family: inherit; }
 .service-card-inner h3, .project-card-inner h3 { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary); transform: translateZ(30px); }
 .service-card-inner p, .project-card-inner p { color: var(--text-secondary); font-size: 0.95rem; transform: translateZ(20px); }
 
-.project-image { height: 160px; background: var(--bg-secondary); border-radius: 12px; margin-bottom: 1.2rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--accent-blue); transform: translateZ(50px); }
-.project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; transform: translateZ(20px); }
-.project-tech span { padding: 0.25rem 0.6rem; background: var(--bg-secondary); border-radius: 4px; font-size: 0.75rem; color: var(--accent-blue); }
+/* 13. PROJECTS SPECIFIC */
+.project-image-wrapper { position: relative; height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.2rem; transform: translateZ(50px); }
+.project-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+.project-overlay { position: absolute; inset: 0; background: rgba(14, 165, 233, 0.8); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s var(--ease); }
+.project-overlay i { color: #fff; font-size: 2rem; transform: scale(0.5); transition: transform 0.3s var(--ease); }
+.tilt-card:hover .project-img { transform: scale(1.1); }
+.tilt-card:hover .project-overlay { opacity: 1; }
+.tilt-card:hover .project-overlay i { transform: scale(1); }
 
-/* 13. CONTACT SECTION */
+.project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; transform: translateZ(20px); }
+.project-tech span { padding: 0.25rem 0.6rem; background: var(--bg-secondary); border-radius: 4px; font-size: 0.75rem; color: var(--accent-blue); font-weight: 500; }
+
+/* 14. REVIEWS SPECIFIC */
+.review-stars { color: #f59e0b; margin-bottom: 1rem; transform: translateZ(30px); }
+.review-card-inner p { color: var(--text-secondary); font-style: italic; margin-bottom: 1.5rem; transform: translateZ(20px); }
+.review-author { display: flex; align-items: center; gap: 1rem; transform: translateZ(40px); }
+.review-author img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-blue); }
+.review-author h4 { font-family: var(--font-display); color: var(--text-primary); font-size: 1rem; }
+.review-author span { color: var(--text-muted); font-size: 0.85rem; }
+
+/* 15. CONTACT SECTION */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; }
 .contact-info h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary); }
 .contact-info p { color: var(--text-secondary); margin-bottom: 2rem; }
@@ -244,7 +260,7 @@ input, textarea { font-family: inherit; }
 .form-success { display: none; margin-top: 1rem; color: #22c55e; font-size: 0.9rem; text-align: center; }
 .form-success.show { display: block; }
 
-/* 14. FOOTER & BACK TO TOP */
+/* 16. FOOTER & BACK TO TOP */
 .footer { padding: 3rem 0; border-top: 1px solid var(--border); text-align: center; background: var(--bg-secondary); }
 .footer-container { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 .footer h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); }
@@ -258,7 +274,7 @@ input, textarea { font-family: inherit; }
 .back-to-top.show { opacity: 1; visibility: visible; }
 .back-to-top:hover { transform: translateY(-3px); }
 
-/* 15. SCROLL REVEAL ANIMATIONS */
+/* 17. SCROLL REVEAL ANIMATIONS */
 [data-reveal] {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
@@ -270,7 +286,7 @@ input, textarea { font-family: inherit; }
     transform: translateY(0) scale(1);
 }
 
-/* 16. KEYFRAMES */
+/* 18. KEYFRAMES */
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 @keyframes blink { 50% { opacity: 0; } }
@@ -287,7 +303,7 @@ input, textarea { font-family: inherit; }
     50% { transform: translateY(-15px) rotateY(5deg); }
 }
 
-/* 17. RESPONSIVE DESIGN */
+/* 19. RESPONSIVE DESIGN */
 @media (max-width: 900px) {
     .hero-container, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hero-visual { order: -1; }
@@ -310,7 +326,6 @@ input, textarea { font-family: inherit; }
     .about-stats { grid-template-columns: 1fr; }
 }
 
-/* Hide cursor on touch devices */
 @media (hover: none) and (pointer: coarse) {
     body { cursor: auto; }
     .cursor-glow, .cursor-dot { display: none; }
