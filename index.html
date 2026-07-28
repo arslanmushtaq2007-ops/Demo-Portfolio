@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Muhammad Arslan — AI Full Stack Engineer. Building modern AI-powered applications and scalable web platforms." />
     <title>Muhammad Arslan — AI Full Stack Engineer</title>
 
-    <!-- Professional Google Fonts: Outfit (Display) & Inter (Body) -->
+    <!-- Professional Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -31,9 +29,7 @@
     <!-- Navigation -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                MA<span class="logo-dot">.</span>
-            </a>
+            <a href="#hero" class="nav-logo">MA<span class="logo-dot">.</span></a>
             <nav class="nav-menu" id="navMenu">
                 <ul class="nav-list">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
@@ -77,11 +73,7 @@
                     <div class="profile-orb">
                         <div class="profile-ring"></div>
                         <div class="profile-image">
-                            <!-- 
-                                PROFILE PICTURE INSTRUCTIONS:
-                                Simply place an image named "profile.jpg" in the same folder as this index.html file.
-                                It will automatically load here.
-                            -->
+                            <!-- PROFILE PICTURE: Place 'profile.jpg' in the same folder -->
                             <img src="profile.jpg" alt="Muhammad Arslan" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="profile-placeholder" style="display: none;">
                                 <i class="fa-solid fa-user"></i>
@@ -95,9 +87,9 @@
         <!-- About Section -->
         <section class="section" id="about">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-label">01 — About</span>
-                    <h2 class="section-title">About Me</h2>
+                <div class="section-header">
+                    <span class="section-label" data-reveal>01 — About</span>
+                    <h2 class="section-title floating-title" data-reveal>About Me</h2>
                 </div>
                 <div class="about-grid">
                     <div class="about-text" data-reveal>
@@ -135,41 +127,40 @@
         <!-- Skills Section -->
         <section class="section" id="skills">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-label">02 — Skills</span>
-                    <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-header">
+                    <span class="section-label" data-reveal>02 — Skills</span>
+                    <h2 class="section-title floating-title" data-reveal>Technical Arsenal</h2>
                 </div>
                 <div class="skills-grid">
-                    <!-- Skill Cards -->
-                    <div class="skill-card" data-reveal data-percent="95">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>Python</span><span class="skill-percent">95%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 95%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="92">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>JavaScript</span><span class="skill-percent">92%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 92%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="88">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>TypeScript</span><span class="skill-percent">88%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 88%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="85">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>Java</span><span class="skill-percent">85%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 85%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="90">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>React</span><span class="skill-percent">90%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="88">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>Node.js</span><span class="skill-percent">88%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 88%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="80">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>TensorFlow</span><span class="skill-percent">80%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 80%"></div></div>
                     </div>
-                    <div class="skill-card" data-reveal data-percent="90">
+                    <div class="skill-card" data-reveal>
                         <div class="skill-info"><span>REST APIs</span><span class="skill-percent">90%</span></div>
                         <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
                     </div>
@@ -180,40 +171,52 @@
         <!-- Services Section -->
         <section class="section" id="services">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-label">03 — Services</span>
-                    <h2 class="section-title">What I Do</h2>
+                <div class="section-header">
+                    <span class="section-label" data-reveal>03 — Services</span>
+                    <h2 class="section-title floating-title" data-reveal>What I Do</h2>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-                        <h3>AI Development</h3>
-                        <p>Building intelligent systems powered by machine learning, NLP, and computer vision.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                            <h3>AI Development</h3>
+                            <p>Building intelligent systems powered by machine learning, NLP, and computer vision.</p>
+                        </div>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-                        <h3>Full Stack Development</h3>
-                        <p>End-to-end web applications with modern frontend frameworks and robust backends.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <h3>Full Stack Development</h3>
+                            <p>End-to-end web applications with modern frontend frameworks and robust backends.</p>
+                        </div>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Machine Learning</h3>
-                        <p>Custom ML models for prediction, classification, and recommendation systems.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>Machine Learning</h3>
+                            <p>Custom ML models for prediction, classification, and recommendation systems.</p>
+                        </div>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
-                        <h3>REST API Development</h3>
-                        <p>Designing fast, secure, and well-documented RESTful APIs for web and mobile.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+                            <h3>REST API Development</h3>
+                            <p>Designing fast, secure, and well-documented RESTful APIs for web and mobile.</p>
+                        </div>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-                        <h3>Automation Scripts</h3>
-                        <p>Streamlining workflows with custom scripts that eliminate repetitive tasks.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Automation Scripts</h3>
+                            <p>Streamlining workflows with custom scripts that eliminate repetitive tasks.</p>
+                        </div>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-                        <h3>UI/UX Development</h3>
-                        <p>Crafting beautiful, intuitive, and responsive user interfaces.</p>
+                    <div class="tilt-card" data-reveal>
+                        <div class="service-card-inner">
+                            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                            <h3>UI/UX Development</h3>
+                            <p>Crafting beautiful, intuitive, and responsive user interfaces.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,54 +225,54 @@
         <!-- Projects Section -->
         <section class="section" id="projects">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-label">04 — Projects</span>
-                    <h2 class="section-title">Featured Work</h2>
+                <div class="section-header">
+                    <span class="section-label" data-reveal>04 — Projects</span>
+                    <h2 class="section-title floating-title" data-reveal>Featured Work</h2>
                 </div>
                 <div class="projects-grid">
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-comments"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-comments"></i></div>
                             <h3>AI Chatbot Platform</h3>
                             <p>An intelligent conversational AI platform with NLP capabilities.</p>
                             <div class="project-tech"><span>Python</span><span>React</span><span>FastAPI</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-cart-shopping"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-cart-shopping"></i></div>
                             <h3>E-Commerce Web App</h3>
                             <p>A full-featured online store with AI-powered recommendations.</p>
                             <div class="project-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-chart-line"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-chart-line"></i></div>
                             <h3>ML Prediction Dashboard</h3>
                             <p>Real-time analytics dashboard powered by ML models for forecasting.</p>
                             <div class="project-tech"><span>Python</span><span>React</span><span>D3.js</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-gears"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-gears"></i></div>
                             <h3>Task Automation Suite</h3>
                             <p>Scripts that streamline data processing and workflow management.</p>
                             <div class="project-tech"><span>Python</span><span>Celery</span><span>Docker</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-wave-square"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-wave-square"></i></div>
                             <h3>Real-Time Analytics Tool</h3>
                             <p>WebSocket-powered tool visualizing live user data with charts.</p>
                             <div class="project-tech"><span>Node.js</span><span>Socket.io</span><span>Vue.js</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-image"><i class="fa-solid fa-network-wired"></i></div>
-                        <div class="project-body">
+                    <div class="tilt-card" data-reveal>
+                        <div class="project-card-inner">
+                            <div class="project-image"><i class="fa-solid fa-network-wired"></i></div>
                             <h3>Neural Network Visualizer</h3>
                             <p>Interactive tool visualizing neural network architectures in 3D.</p>
                             <div class="project-tech"><span>TensorFlow.js</span><span>Three.js</span></div>
@@ -282,9 +285,9 @@
         <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-label">05 — Contact</span>
-                    <h2 class="section-title">Get In Touch</h2>
+                <div class="section-header">
+                    <span class="section-label" data-reveal>05 — Contact</span>
+                    <h2 class="section-title floating-title" data-reveal>Get In Touch</h2>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-info" data-reveal>
@@ -296,11 +299,7 @@
                             <span>aslanmushtaq2007@gmail.com</span>
                         </a>
 
-                        <!-- 
-                            WHATSAPP BUTTON 
-                            IMPORTANT: Replace '923001234567' with your real number. 
-                            Format: Country code + number (no +, no spaces).
-                        -->
+                        <!-- WHATSAPP BUTTON: Replace '923001234567' with your real number -->
                         <a href="https://wa.me/923062871199" target="_blank" class="contact-whatsapp-btn">
                             <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                         </a>
